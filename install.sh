@@ -20,10 +20,6 @@ if [ "${OS}" = "Linux" ] ; then
       exit 1
     fi
 
-    if [ -f /etc/UnitedLinux-release ] ; then
-        DIST="${DIST}[`cat /etc/UnitedLinux-release | tr "\n" ' ' | sed s/VERSION.*//`]"
-    fi
-
     DIST=`lowercase $DIST`
     REV=`lowercase $REV`
 else
