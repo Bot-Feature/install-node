@@ -348,3 +348,5 @@ if [ "${copiedtoken}" == "y" ]; then
     rm -r /opt/TS3AudioBot/TS3AudioBot/bin/Release/netcoreapp3.1/bots/default
     systemctl restart ts3audiobot
 fi
+
+echo -e "\e[32mThe installation is now complete. The Bot Node can be added under the following URL: https://bot-feature.com/hosts\e[0m"
