@@ -341,7 +341,43 @@ read copiedtoken
 
 # If api token is copied, than delete default bot
 if [ "${copiedtoken}" == "y" ]; then
-    rm -r /opt/TS3AudioBot/TS3AudioBot/bin/Release/netcoreapp3.1/bots/default
+    # Add default Bot config
+    echo "#Starts the instance when the TS3AudioBot is launched.
+          run = true
+
+          [commands]
+
+          [commands.alias]
+
+          [connect]
+          #The server password. Leave empty for none.
+          server_password = { pw = \"\" }
+          #The default channel password. Leave empty for none.
+          channel_password = {  }
+          #Overrides the displayed version for the ts3 client. Leave empty for default.
+          client_version = {  }
+          #The address, ip or nickname (and port; default: 9987) of the TeamSpeak3 server
+          address = \"\"
+
+          [connect.identity]
+          #||| DO NOT MAKE THIS KEY PUBLIC ||| The client identity. You can import a teamspeak3 identity here too.
+          key = \"\"
+          #The client identity offset determining the security level.
+          offset = 26
+
+          [reconnect]
+
+          [audio]
+          #When a new song starts the volume will be trimmed to between min and max.
+          #When the current volume already is between min and max nothing will happen.
+          #To completely or partially disable this feature, set min to 0 and/or max to 100.
+          volume = {  }
+
+          [playlists]
+
+          [history]
+
+          [events]" > /opt/TS3AudioBot/TS3AudioBot/bin/Release/netcoreapp3.1/bots/default/bot.toml
     systemctl restart ts3audiobot
 fi
 
