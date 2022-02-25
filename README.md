@@ -13,6 +13,6 @@ A script to set up a TS3Audiobot node for Bot-Feature fully automatically
 - Ubuntu 20.04
 
 ## Installation
-**1.** wget https://raw.githubusercontent.com/Bot-Feature/install-node/main/install.sh
-**2.** chmod 777 install.sh
+**1.** wget https://raw.githubusercontent.com/Bot-Feature/install-node/main/install.sh <br>
+**2.** chmod 777 install.sh <br>
 **3.** ./install.sh and follow the steps
