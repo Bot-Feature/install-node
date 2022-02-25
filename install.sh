@@ -340,7 +340,7 @@ enabled = false
 #The webinterface folder to host. Leave empty to let the bot look for default locations.
 path = \"\"" > /opt/TS3AudioBot/TS3AudioBot/bin/Release/netcoreapp3.1/ts3audiobot.toml
 
-echo -e "N\e[33mow you can write to the bot again with !api token. Copy the output and save it securely.\e[0m Then to complete the installation enter \"y\""
+echo -e "\e[33mNow you can write to the bot again with !api token. Copy the output and save it securely.\e[0m Then to complete the installation enter \"y\""
 read copiedtoken
 
 # If api token is copied, than delete default bot
